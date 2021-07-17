@@ -3,8 +3,8 @@
 namespace HelloWorld
 {
     class Program
-    // from https://codereview.stackexchange.com/questions/9972/syllable-counting-function
     {
+        // SyllableCount from https://codereview.stackexchange.com/questions/9972/syllable-counting-function
         private static int SyllableCount(string word)
             {
             word = word.ToLower().Trim();
@@ -57,9 +57,10 @@ namespace HelloWorld
             }
 
             Console.WriteLine("Enter your name please: ");
-            string line = Console.ReadLine();
-            Console.WriteLine("Welcome " + line);
+            string name = Console.ReadLine();
+            Console.WriteLine("Welcome " + name);
                        
+            Console.WriteLine("\nSome animals:");
             var animals = new string[] { "Triceratops", "Gorilla", "Corgi", "Toucan", "Cat" };
             foreach (var animal in animals)
             {
@@ -68,19 +69,20 @@ namespace HelloWorld
                     Console.WriteLine(animal);
                 }
             }
+            Console.Write('\n');
             Console.WriteLine("What is your favorite color?");
             string color= Console.ReadLine();
             Console.WriteLine("Would you like a random animal that is " + color + '?');
             Console.WriteLine("Enter 'y' for yes, 'n' for no");
             var answer = Console.ReadKey();
-            Console.Write(' ');
+            Console.Write('\n');
             if (answer.Key.ToString() == "Y") {
                 var rand = new Random();
                 int animalIndex = rand.Next(animals.Length);
                 Console.WriteLine("Would you like to have a " + color + ' ' + animals[animalIndex] + '?');
                 Console.WriteLine("Enter 'y' for yes, 'n' for no");
                 answer = Console.ReadKey();
-                Console.Write(' ');
+                Console.Write('\n');
                 if (answer.Key.ToString() == "Y")
                 {
                     Console.WriteLine("Well than you may have a " + color + ' ' + animals[animalIndex] + '.');
