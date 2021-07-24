@@ -45,14 +45,14 @@ namespace HelloWorld
             switch (ch)
             {
                 case '2':
-                    Console.WriteLine(greeting[1]);
+                    Console.WriteLine(args[1]);
                     break;
                 case '3':
-                    Console.WriteLine(greeting[2]);
+                    Console.WriteLine(args[2]);
                     break;
                 case '1':
                 default:
-                    Console.WriteLine(greeting[0]);
+                    Console.WriteLine(args[0]);
                     break;
             }
 
